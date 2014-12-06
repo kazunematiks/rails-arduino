@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'arduino_firmata'
+gem 'dotenv'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0.rc2'

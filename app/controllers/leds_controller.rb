@@ -5,12 +5,9 @@ class LedsController < ApplicationController
   # GET /leds.json
 	arduino =""
   def index
-#    @leds = Led.all
-#		arduino = ArduinoFirmata.connect "/dev/tty.usbserial-A7006Sog"
-		puts "firmata version #{ARDUINO.version}"
 	end
 
-  def show
+  def blink
 		puts "blink"
 		ARDUINO.digital_write 13, true
 		sleep 0.3
@@ -19,7 +16,6 @@ class LedsController < ApplicationController
 		ARDUINO.digital_write 13, true
 		sleep 0.3
 		ARDUINO.digital_write 13, false
-		puts "mitsuba宅のLEDチカチカ！"
 		redirect_to action: 'index'
   end
 
